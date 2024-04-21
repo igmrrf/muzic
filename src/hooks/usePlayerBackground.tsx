@@ -13,6 +13,7 @@ const usePlayerBackground = (imageUrl: string) => {
             key: imageUrl,
         }).then((colors) => setImageColors(colors as IOSImageColors))
     }, [imageUrl])
+
     return { imageColors }
 }
 

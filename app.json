@@ -1,12 +1,12 @@
 {
 	"expo": {
-		"name": "anime-music",
-		"slug": "anime-music",
+		"name": "muzic",
+		"slug": "muzic",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "dark",
-		"scheme": "anime-music",
+		"scheme": "muzic",
 		"splash": {
 			"image": "./assets/splash.png",
 			"resizeMode": "contain",
@@ -15,7 +15,7 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.anonymous.anime-music",
+			"bundleIdentifier": "com.anonymous.muzic",
 			"infoPlist": {
 				"UIBackgrounds": ["audio"]
 			}
@@ -25,7 +25,7 @@
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#000000"
 			},
-			"package": "com.anonymous.animemusic"
+			"package": "com.anonymous.muzic"
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
