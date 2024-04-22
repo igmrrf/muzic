@@ -17,6 +17,9 @@ export const utilsStyles = StyleSheet.create({
         height: 7,
         borderRadius: 16,
     },
+    flex: {
+        flex: 1,
+    },
     itemsSeparator: {
         borderColor: colors.textMuted,
         borderWidth: StyleSheet.hairlineWidth,

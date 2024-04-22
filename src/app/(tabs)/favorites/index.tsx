@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import TrackLists from '@/components/TrackLists'
 import { screenPadding } from '@/constants/tokens'
 import useNavigationSearch from '@/hooks/useNavigationSearch'
@@ -16,6 +16,7 @@ const FavoriteScreen = () => {
     })
 
     const favorites = useFavorites().favorites
+
     const filteredTracks = useMemo(() => {
         if (!search) return favorites
 
