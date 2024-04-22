@@ -2,7 +2,7 @@ import { MovingText } from '@/components/MovingText'
 import { unknownTrackImageUrl } from '@/constants/images'
 import { colors, screenPadding } from '@/constants/tokens'
 import { defaultStyles, utilsStyles } from '@/styles'
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Platform, StyleSheet, Text, View } from 'react-native'
 import FastImage from 'react-native-fast-image'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useActiveTrack } from 'react-native-track-player'
@@ -13,6 +13,7 @@ import PlayerRepeatToggle from '@/components/PlayerRepeatToggle'
 import PlayerVolumeBar from '@/components/PlayerVolumeBar'
 import usePlayerBackground from '@/hooks/usePlayerBackground'
 import { LinearGradient } from 'expo-linear-gradient'
+import { platforms } from '@/constants/system'
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
@@ -36,12 +37,12 @@ const PlayerScreen = () => {
             colors={
                 imageColors
                     ? [imageColors.background, imageColors.primary]
-                    : [colors.background]
+                    : [colors.background, colors.primary]
             }
             style={{ flex: 1 }}
         >
             <View style={playerStyles.overlayContainer}>
-                <DismissPlayerSymbol />
+                {Platform.OS === 'ios' ? <DismissPlayerSymbol /> : undefined}
                 <View style={{ flex: 1, marginTop: top + 70, marginBottom: bottom }}>
                     <View style={playerStyles.artworkImageContainer}>
                         <FastImage
