@@ -6,8 +6,12 @@ import { SplashScreen } from 'expo-router'
 import { useCallback } from 'react'
 import { useLogTrackPlayerState } from '@/hooks/useLogTrackPlayer'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { colors } from '@/constants/tokens'
+import TrackPlayer from 'react-native-track-player'
+import { playbackService } from '@/constants/playbackService'
 
 SplashScreen.preventAutoHideAsync()
+TrackPlayer.registerPlaybackService(() => playbackService)
 
 const App = () => {
     const handleTrackPlayerLoaded = useCallback(() => {
@@ -45,6 +49,20 @@ const RootNavigation = () => {
                     gestureDirection: 'vertical',
                     animationDuration: 400,
                     headerShown: false,
+                }}
+            />
+
+            <Stack.Screen
+                name='(modals)/addToPlaylistModal'
+                options={{
+                    presentation: 'modal',
+                    headerStyle: {
+                        backgroundColor: colors.background,
+                    },
+                    headerTitle: 'Add to playlist',
+                    headerTitleStyle: {
+                        color: colors.primary,
+                    },
                 }}
             />
         </Stack>

@@ -13,7 +13,7 @@ import PlayerRepeatToggle from '@/components/PlayerRepeatToggle'
 import PlayerVolumeBar from '@/components/PlayerVolumeBar'
 import usePlayerBackground from '@/hooks/usePlayerBackground'
 import { LinearGradient } from 'expo-linear-gradient'
-import { platforms } from '@/constants/system'
+import useTrackPlayerFavorite from '@/hooks/useTrackPlayerFavorite'
 
 const PlayerScreen = () => {
     const activeTrack = useActiveTrack()
@@ -22,9 +22,8 @@ const PlayerScreen = () => {
     const { imageColors } = usePlayerBackground(
         activeTrack?.artwork ?? unknownTrackImageUrl
     )
-    const isFavorite = false
-    const toggleFavorite = () => {}
 
+    const { isFavorite, toggleFavorite } = useTrackPlayerFavorite()
     if (!activeTrack)
         return (
             <View style={[defaultStyles.container, { justifyContent: 'center' }]}>
