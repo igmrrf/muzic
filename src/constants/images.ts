@@ -1,6 +1,4 @@
-import unknownArtistImage from '@/assets/unknown_artist.png'
-import unknownTrackImage from '@/assets/unknown_track.png'
-import { Image } from 'react-native'
-
-export const unknownTrackImageUrl = Image.resolveAssetSource(unknownTrackImage).uri
-export const unknownArtistImageUrl = Image.resolveAssetSource(unknownArtistImage).uri
+export const unknownTrackImageUrl =
+    'https://github.com/igmrrf/muzic/blob/main/assets/unknown_track.png?raw=true'
+export const unknownArtistImageUrl =
+    'https://github.com/igmrrf/muzic/blob/main/assets/unknown_artist.png?raw=true'

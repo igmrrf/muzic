@@ -1,4 +1,3 @@
-import { unknownArtistImageUrl } from '@/constants/images'
 import { fontSize } from '@/constants/tokens'
 import { trackTitleFilter } from '@/helpers/filter'
 import { generateTracksListId } from '@/helpers/miscellaneous'
