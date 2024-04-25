@@ -36,7 +36,7 @@ const PlayerScreen = () => {
             colors={
                 imageColors
                     ? [imageColors.background, imageColors.primary]
-                    : [colors.background, colors.primary]
+                    : [colors.background, colors.background]
             }
             style={{ flex: 1 }}
         >

@@ -2,11 +2,11 @@ import { StackScreenWithSearchBar } from '@/constants/layout'
 import { colors } from '@/constants/tokens'
 import { defaultStyles } from '@/styles'
 import { Stack } from 'expo-router'
-import { View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const ArtistsScreenLayout = () => {
     return (
-        <View style={defaultStyles.container}>
+        <SafeAreaView style={defaultStyles.container}>
             <Stack>
                 <Stack.Screen
                     name='index'
@@ -25,7 +25,7 @@ const ArtistsScreenLayout = () => {
                     }}
                 />
             </Stack>
-        </View>
+        </SafeAreaView>
     )
 }
 

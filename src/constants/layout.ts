@@ -1,8 +1,6 @@
-import {
-    NativeStackNavigationOptions,
-    NativeStackNavigationProp,
-} from '@react-navigation/native-stack'
+import { NativeStackNavigationOptions } from '@react-navigation/native-stack'
 import { colors } from './tokens'
+import { isAndroid, isiOS } from './system'
 
 export const StackScreenWithSearchBar: NativeStackNavigationOptions = {
     headerLargeTitle: true,
@@ -12,8 +10,13 @@ export const StackScreenWithSearchBar: NativeStackNavigationOptions = {
     headerLargeTitleStyle: {
         color: colors.text,
     },
+    ...(isAndroid && {
+        headerStyle: {
+            backgroundColor: colors.background,
+        },
+    }),
     headerTintColor: colors.text,
-    headerTransparent: true,
+    headerTransparent: isiOS,
     headerBlurEffect: 'prominent',
     headerShadowVisible: false,
 }

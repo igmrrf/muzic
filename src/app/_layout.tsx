@@ -1,7 +1,7 @@
 import { useSetupTrackPlayer } from '@/hooks/useSetupTrackPlayer'
 import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 import { SplashScreen } from 'expo-router'
 import { useCallback } from 'react'
 import { useLogTrackPlayerState } from '@/hooks/useLogTrackPlayer'
@@ -22,7 +22,7 @@ const App = () => {
     })
     useLogTrackPlayerState()
     return (
-        <SafeAreaProvider>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <GestureHandlerRootView style={{ flex: 1 }}>
                 <RootNavigation />
 

@@ -1,7 +1,7 @@
 import { colors, fontSize } from '@/constants/tokens'
 import { Tabs } from 'expo-router'
 import { BlurView } from 'expo-blur'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import {
     FontAwesome,
     FontAwesome6,
@@ -9,6 +9,7 @@ import {
     MaterialCommunityIcons,
 } from '@expo/vector-icons'
 import { FloatingPlayer } from '@/components/FloatingPlayer'
+import { isiOS } from '@/constants/system'
 
 const TabsNavigation = () => {
     return (
@@ -28,17 +29,32 @@ const TabsNavigation = () => {
                         borderTopWidth: 0,
                         paddingTop: 8,
                     },
-                    tabBarBackground: () => (
-                        <BlurView
-                            intensity={95}
-                            style={{
-                                ...StyleSheet.absoluteFillObject,
-                                overflow: 'hidden',
-                                borderTopLeftRadius: 20,
-                                borderTopRightRadius: 20,
-                            }}
-                        />
-                    ),
+                    tabBarBackground: () => {
+                        if (isiOS) {
+                            return (
+                                <BlurView
+                                    intensity={95}
+                                    style={{
+                                        ...StyleSheet.absoluteFillObject,
+                                        overflow: 'hidden',
+                                        borderTopLeftRadius: 20,
+                                        borderTopRightRadius: 20,
+                                    }}
+                                />
+                            )
+                        }
+                        return (
+                            <View
+                                style={{
+                                    ...StyleSheet.absoluteFillObject,
+                                    overflow: 'hidden',
+                                    backgroundColor: colors.background,
+                                    borderTopLeftRadius: 20,
+                                    borderTopRightRadius: 20,
+                                }}
+                            />
+                        )
+                    },
                 }}
             >
                 <Tabs.Screen
@@ -86,7 +102,7 @@ const TabsNavigation = () => {
                 style={{
                     position: 'absolute',
                     left: 8,
-                    bottom: 78,
+                    bottom: isiOS ? 78 : 50,
                 }}
             />
         </>

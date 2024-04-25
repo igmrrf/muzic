@@ -14,7 +14,6 @@ const PlaylistsScreen = () => {
     const router = useRouter()
     const search = useNavigationSearch({
         searchBarOptions: {
-            hideWhenScrolling: true,
             placeholder: 'Find in playlists',
         },
     })
@@ -40,7 +39,6 @@ const PlaylistsScreen = () => {
                     onPlaylistPress={handlePlaylistPress}
                 />
             </ScrollView>
-            <Text style={defaultStyles.text}>Playlists Screen</Text>
         </View>
     )
 }
