@@ -21,14 +21,14 @@
 			"infoPlist": {
 				"UIBackgrounds": ["audio"]
 			},
-			"buildNumber": "2"
+			"buildNumber": "1"
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#000000"
 			},
-			"versionCode": 2,
+			"versionCode": 3,
 			"package": "com.anonymous.muzic"
 		},
 		"web": {
