@@ -4,7 +4,7 @@
 		"slug": "muzic",
 		"description": "A free music app that curates beautiful genres of music for different individuals to celebrate their individualities.",
 		"owner": "igmrrf",
-		"version": "1.0.1",
+		"version": "1.0.2",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "dark",
@@ -20,13 +20,15 @@
 			"bundleIdentifier": "com.anonymous.muzic",
 			"infoPlist": {
 				"UIBackgrounds": ["audio"]
-			}
+			},
+			"buildNumber": "2"
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#000000"
 			},
+			"versionCode": 2,
 			"package": "com.anonymous.muzic"
 		},
 		"web": {
