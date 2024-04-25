@@ -1,18 +1,18 @@
 import { StackScreenWithSearchBar } from '@/constants/layout'
 import { defaultStyles } from '@/styles'
 import { Stack } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View } from 'react-native'
 
 const FavoriteScreenLayout = () => {
     return (
-        <SafeAreaView style={defaultStyles.container}>
+        <View style={defaultStyles.container}>
             <Stack>
                 <Stack.Screen
                     name='index'
                     options={{ headerTitle: 'Favorites', ...StackScreenWithSearchBar }}
                 />
             </Stack>
-        </SafeAreaView>
+        </View>
     )
 }
 
