@@ -9,6 +9,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { colors } from '@/constants/tokens'
 import TrackPlayer from 'react-native-track-player'
 import { playbackService } from '@/constants/playbackService'
+import { isAndroid } from '@/constants/system'
 
 SplashScreen.preventAutoHideAsync()
 TrackPlayer.registerPlaybackService(() => playbackService)
@@ -49,6 +50,7 @@ const RootNavigation = () => {
                     gestureDirection: 'vertical',
                     animationDuration: 400,
                     headerShown: false,
+                    ...(isAndroid && { animation: 'slide_from_bottom' }),
                 }}
             />
 
