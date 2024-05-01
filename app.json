@@ -4,7 +4,7 @@
 		"slug": "muzic",
 		"description": "A free music app that curates beautiful genres of music for different individuals to celebrate their individualities.",
 		"owner": "igmrrf",
-		"version": "1.0.2",
+		"version": "1.0.3",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "dark",
