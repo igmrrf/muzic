@@ -55,6 +55,18 @@ const RootNavigation = () => {
             />
 
             <Stack.Screen
+                name='notification'
+                options={{
+                    presentation: 'card',
+                    gestureEnabled: true,
+                    gestureDirection: 'vertical',
+                    animationDuration: 400,
+                    headerShown: false,
+                    ...(isAndroid && { animation: 'slide_from_bottom' }),
+                }}
+            />
+
+            <Stack.Screen
                 name='(modals)/addToPlaylistModal'
                 options={{
                     presentation: 'modal',
